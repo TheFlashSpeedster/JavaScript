@@ -10,9 +10,11 @@
 
 <body>
   <div id="calculator">
+    <!-- Display -->
     <input type="text" id="display" value="" placeholder="Calculator" readonly>
     <div id="button_container">
-      <button class="btn" onclick="currentValue = '';
+      <!-- ROW 1 -->
+      <button id="clearButton" class="btn" onclick="currentValue = '';
       document.querySelector('#display').value=currentValue">C</button>
 
       <button class="btn" onclick="currentValue = currentValue + '1';
@@ -21,16 +23,19 @@
       <button class="btn" onclick="currentValue = currentValue + '2';
       document.querySelector('#display').value=currentValue">2</button>
 
-      <button class="btn" onclick="currentValue = currentValue + '+';
+      <!-- ROW 2 -->
+      <button class="btn operator" onclick="currentValue = currentValue + '+';
       document.querySelector('#display').value=currentValue">+</button>
 
+      <!-- ROW 3 -->
       <button class="btn" onclick="currentValue = currentValue + '3';
       document.querySelector('#display').value=currentValue">3</button>
 
       <button class="btn" onclick="currentValue = currentValue + '4';
       document.querySelector('#display').value=currentValue">4</button>
 
-      <button class="btn" onclick="currentValue = currentValue + '-';
+      <!-- ROW 4 -->
+      <button class="btn operator" onclick="currentValue = currentValue + '-';
       document.querySelector('#display').value=currentValue">-</button>
 
       <button class="btn" onclick="currentValue = currentValue + '5';
@@ -39,7 +44,8 @@
       <button class="btn" onclick="currentValue = currentValue + '6';
       document.querySelector('#display').value=currentValue">6</button>
 
-      <button class="btn" onclick="currentValue = currentValue + '*';
+      <!-- ROW 5 -->
+      <button class="btn operator" onclick="currentValue = currentValue + '*';
       document.querySelector('#display').value=currentValue">*</button>
 
       <button class="btn" onclick="currentValue = currentValue + '7';
@@ -48,7 +54,8 @@
       <button class="btn" onclick="currentValue = currentValue + '8';
       document.querySelector('#display').value=currentValue">8</button>
 
-      <button class="btn" onclick="currentValue = currentValue + '/';
+      <!-- ROW 6 -->
+      <button class="btn operator" onclick="currentValue = currentValue + '/';
       document.querySelector('#display').value=currentValue">/</button>
 
       <button class="btn" onclick="currentValue = currentValue + '9';
@@ -57,6 +64,7 @@
       <button class="btn" onclick="currentValue = currentValue + '0';
       document.querySelector('#display').value=currentValue">0</button>
 
+      <!-- ROW 7 -->
       <button class="btn" onclick="currentValue = currentValue + '.';
       document.querySelector('#display').value=currentValue">.</button>
 
