@@ -1,0 +1,43 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 6px;
+}
+
+.choices {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  border: 2px solid blueviolet;
+  border-radius: 20%;
+  background-color: transparent;
+}
+
+.choices:hover {
+  background-color: rgb(100, 149, 255, 0.5);
+}
+
+#bat {
+  background-image: url(cricket-bat.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#ball {
+  background-image: url(cricket-ball.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#stump {
+  background-image: url(cricket-wicket.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

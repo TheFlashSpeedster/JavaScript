@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logical Operators</title>
+</head>
+<body>
+  <!-- 
+  NOTE:
+  Lower Priority Than Math and Comparision Operators
+  -->
+
+  <h1>&& (AND)</h1>
+  <p>All Conditions Must Be TRUE</p>
+  
+  <script>
+    let age = 23; 
+    if (age>18 && age<65){
+      console.log('You Can Drive ✅')
+    }
+    else{
+      console.log('You Cannot Drive ❌')
+    }
+  </script>
+  <hr>
+  
+  <h1>|| (OR)</h1>
+  <p>Anyone Condition Must Be TRUE</p>
+
+  <script>
+    let letter = '';
+    if (letter==='a' || letter==='A'){
+      console.log('A')
+    }
+    else if (letter==='b' || letter==='B'){
+      console.log('B')
+    }
+    else{
+      console.log('Its Neither A/a nor B/b')
+    }
+  </script>
+  
+  <hr>
+  <h1>! (NOT)</h1>
+  <p>Inverts The Boolean Value of a Condition</p>
+  <p>!(true) : false</p>
+  <p>!(false) : true</p>
+  <p></p>
+</body>
+</html>

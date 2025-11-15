@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scope</title>
+</head>
+<body>
+  <h1>Global Scope</h1>
+  <b>Accessible Everywhere</b>
+
+  <h1>Local Scope</h1>
+  <b>Limited Accessibility</b>
+
+  <ol type="A">
+    <li>Block Scope (let, const)</li>
+    <ul>
+      <li>Accessible within Curly Braces</li>
+    </ul>
+
+    <script>
+      let msg='This is Message';
+      if (5>10){
+        msg = 'Hello';
+      }
+      else {
+        msg='World'
+      }
+      console.log(msg)
+    </script>
+
+    <li>Function Scope (var)</li>
+    <ul>
+      <li>Accessible inside a function</li>
+    </ul>
+  </ol>
+</body>
+</html>

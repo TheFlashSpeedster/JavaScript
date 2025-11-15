@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="cricket.png">
+  <script src="https://kit.fontawesome.com/d7f0ad760c.js" crossorigin="anonymous"></script>
+  <title>Cricket Game</title>
+</head>
+
+<body>
+  <h1>Bat Ball Stump Game</h1>
+
+  <!-- Choosing Bat -->
+  <div class="btn">
+    <button id="bat" class="choices" onclick="
+  // User Choice
+  let userChoice='Bat'
+
+  // rn Range = 0 to 3
+  // Bat = 0 to 1
+  // Ball = 1 to 2
+  // Stump = 2 to 3
+
+  let rn = Math.random()*3;
+  let computerChoice;
+
+  // Computer Choice
+  if (rn>0 && rn<=1){
+    computerChoice='Bat'
+  }
+  else if (rn>1 && rn<=2){
+    computerChoice='Ball'
+  }
+  else{
+    computerChoice='Stump'
+  }
+  
+  // Results
+  if (computerChoice==='Bat'){
+    msg  = 'Tied 🙃';
+  }
+  else if(computerChoice==='Ball'){
+    msg = 'You Won 😎';
+  }
+  else{
+    msg = 'You Lost 😭';
+  }
+  
+  document.querySelector('#result').innerHTML=(`You: Bat<br> Computer: ${computerChoice}<br> Result: ${msg}`)
+  "></button>
+
+    <!-- Choosing Ball -->
+    <button id="ball" class="choices" onclick="
+  // User Choice
+  userChoice='Ball'
+
+  // rn Range = 0 to 3
+  // Bat = 0 to 1
+  // Ball = 1 to 2
+  // Stump = 2 to 3
+
+  // Computer Choice
+  rn = Math.random()*3;
+
+  if (rn>0 && rn<=1){
+    computerChoice='Bat'
+  }
+  else if (rn>1 && rn<=2){
+    computerChoice='Ball'
+  }
+  else{
+    computerChoice='Stump'
+  }
+  
+  // Results
+  if (computerChoice==='Ball'){
+    msg  = 'Tied 🙃';
+  }
+  else if(computerChoice==='Stump'){
+    msg = 'You Won 😎';
+  }
+  else{
+    msg = 'You Lost 😭';
+  }
+  
+  document.querySelector('#result').innerHTML=(`You: Ball<br> Computer: ${computerChoice}<br> Result: ${msg}`)
+  "></button>
+
+    <!-- Choosing Stump -->
+    <button id="stump" class="choices" onclick="
+  // User Choice
+  userChoice='Stump'
+
+  // rn Range = 0 to 3
+  // Bat = 0 to 1
+  // Ball = 1 to 2
+  // Stump = 2 to 3
+
+  rn = Math.random()*3;
+
+  // Computer Choice
+  if (rn>0 && rn<=1){
+    computerChoice='Bat'
+  }
+  else if (rn>1 && rn<=2){
+    computerChoice='Ball'
+  }
+  else{
+    computerChoice='Stump'
+  }
+  
+  // Results
+  if (computerChoice==='Stump'){
+    msg  = 'Tied 🙃';
+  }
+  else if(computerChoice==='Bat'){
+    msg = 'You Won 😎';
+  }
+  else{
+    msg = 'You Lost 😭';
+  }
+  
+  document.querySelector('#result').innerHTML=(`You: Stump<br> Computer: ${computerChoice}<br> Result: ${msg}`)
+  "></button>
+  </div>
+  <hr>
+  <div class="result">
+    <h2 id="result">
+      You: None<br> Computer: None<br> Result: None
+    </h2>
+  </div>
+</body>
+
+</html>
