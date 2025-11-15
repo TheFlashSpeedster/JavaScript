@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Eval Method</h1>
+  <script>
+    console.log(5+15); // 20 (number)
+    console.log(typeof(5+15)) // number 
+
+    // Without Eval
+    console.log('5+15'); // 5+15 (string)
+    console.log('5'+'15'); // 515 (string)
+    console.log(typeof('5'+'15')); // string
+
+    // With Eval
+    console.log(eval('5+15')); // 20 (number)
+    console.log(eval(('5'+'15'))); // 515 (number)
+    console.log(typeof(eval(('5'+'15')))); // number
+  </script>
+</body>
+</html>

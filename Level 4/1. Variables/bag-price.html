@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let bagPrice = 15599;
+    let bagDiscount = 10/100;
+    let bagCoupon = 272;
+    let bagExtra = 25;
+
+    let jeansPrice = 2499;
+    let jeansDiscount = 41/100;
+    let jeansCoupon = 29;
+    let jeansExtra = 20;
+
+    let gst = 118/100;
+
+    let bagFinal = (bagPrice - bagDiscount*bagPrice - bagCoupon) + bagExtra
+    let jeansFinal = (jeansPrice - jeansDiscount*jeansPrice - jeansCoupon) + jeansExtra
+
+    let totalPrice = (bagFinal + jeansFinal) * gst
+    let finalPrice = Math.round(totalPrice)
+
+    alert(`Final Price: ₹${finalPrice}`)
+    console.info(`Final Price: ₹${finalPrice}`)
+  </script>
+</body>
+</html>

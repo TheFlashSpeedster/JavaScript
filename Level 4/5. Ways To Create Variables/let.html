@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- let: Used when value has to be updated in future -->
+  <!-- BUT: It can be only used inside the block of code where it was defined -->
+  <script>
+    let pi = 3.1428571429;
+    let r = 4;
+    console.log(pi * r * r); // 50.2857142864 (Correct Answer)
+
+    pi = 4; // trying to change "pi" value
+    console.log(pi * r * r); // 64 (Wrong Answer)
+  </script>
+</body>
+</html>

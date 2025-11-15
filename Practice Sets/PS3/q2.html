@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="price"></h1>
+  <script>
+    let bagPrice = 15599;
+    let bagDiscount = 10/100;
+    let bagCoupon = 272;
+    let bagExtra = 25;
+
+    let jeansPrice = 2499;
+    let jeansDiscount = 41/100;
+    let jeansCoupon = 29;
+    let jeansExtra = 20;
+
+    const gst = 118/100;
+
+    let bagFinal = (bagPrice - bagDiscount*bagPrice - bagCoupon) + bagExtra
+    let jeansFinal = (jeansPrice - jeansDiscount*jeansPrice - jeansCoupon) + jeansExtra
+
+    let totalPrice = (bagFinal + jeansFinal) * gst
+    let finalPrice = Math.round(totalPrice)
+
+    console.info(`Final Price: ₹${finalPrice}`)
+    document.querySelector('#price').innerHTML=(`Final Price: ₹${finalPrice}`)
+  </script>
+</body>
+</html>

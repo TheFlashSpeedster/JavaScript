@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS1</title>
+</head>
+<body>
+    <h1>Q1</h1>
+    <p>(1*100) + (2*10) + (1*30) : 150</p>
+    <p>'₹' + ((1*100) + (2*10) + (1*30)) : "₹150"</p>
+    <p>`Final Bill: ₹${((1*100) + (2*10) + (1*30))}` : "Final Bill: ₹150"</p>
+    <hr>
+
+    <h1>Q2</h1>
+    <p>`GST Amount is ₹${(1*79990 + 2*24990) * 18/100}`</p>
+    <hr>
+
+    <h1>Q3</h1>
+    <p>M1: 'Hello World'</p>
+    <p>M2: "Hello World"</p>
+    <p>M3: `Hello World`</p>
+    <hr>
+
+    <h1>Q4</h1>
+    <h3>string with string</h3>
+    <p>"Hello" + " World" : "Hello World"</p>
+    <h3>string with number</h3>
+    <p>"Hello" + 54 : "Hello54"</p>
+    <hr>
+
+    <h1>Q5</h1>
+    <p>`Your Final Cart Amount is ₹${((15599 - (10/100 * 15599)) - 272 + ((2499 - (41/100*2499)) - 29 + 25 + 20))*118/100}`</p>
+    <br>
+    <h3>With Math.round()</h3>
+    <p>`Your Final Cart Amount is ₹${Math.round(((15599 - (10/100 * 15599)) - 272 + ((2499 - (41/100*2499)) - 29 + 25 + 20))*118/100)}`</p>
+    <hr>
+
+    <h1>Q6</h1>
+    <p>alert(`Your Final Cart Amount is ₹${Math.round(((15599 - (10/100 * 15599)) - 272 + ((2499 - (41/100*2499)) - 29 + 25 + 20))*118/100)}`)</p>
+</body>
+</html>

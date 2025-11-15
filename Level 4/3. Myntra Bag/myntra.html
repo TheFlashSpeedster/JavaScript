@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myntra</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/d7f0ad760c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Add To Bag (+1) -->
+  <button class="btn" id="btn1" onclick="cartQty += 1; document.querySelector('#cart_summary').innerText = `Your Bag Has ${cartQty} Items`;"><i class="fa-solid fa-bag-shopping"></i> Add To Bag</button>
+
+  <!-- Move To Wishlist (-1) -->
+  <button class="btn" id="btn2" onclick="cartQty -= 1; document.querySelector('#cart_summary').innerText = `Your Bag Has ${cartQty} Items`;"><i class="fa-solid fa-heart"></i> Move To Wishlist</button>
+  
+  <!-- Add 1+1 Sale Item (+2) -->
+  <button class="btn" id="btn3" onclick="cartQty += 2; document.querySelector('#cart_summary').innerText = `Your Bag Has ${cartQty} Items`;"><i class="fa-solid fa-circle-check"></i> Add 1+1 Sale Item</button>
+
+  <h3 id="cart_summary">Your Bag Has 0 Items</h3>
+
+  <script>
+    let cartQty = 0;
+    // document.querySelector('#cart_summary').innerText = `Your Bag Has ${cartQty} Items`;
+
+  </script>
+</body>
+</html>
