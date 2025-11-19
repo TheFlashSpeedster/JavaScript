@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parameters</title>
+</head>
+<body>
+  <h1>Parameters</h1>
+  <p>Parameters are special variables that are used to pass information into functions. They act as placeholders for the values (arguments) that will be provided when the function is called.</p>
+  
+  <h2>Defining Parameters</h2>
+  <p>When defining a function, you can specify parameters within the parentheses following the function name. For example:</p>
+  <pre><code>def greet(name):
+    print("Hello, " + name + "!")
+  </code></pre>
+  
+  <!-- EXAMPLES -->
+   <script>
+    function sum(a,b){ // Defining Parameters (a and b)
+      return a+b;
+    }
+
+    // Passing Arguments & Storing Then Output
+    result = sum(4,5);
+    console.log(result); // 9 
+
+    // Directly Calling & Passing Arguments
+    console.log(sum(2,3)); // 5
+    console.log(sum(3,5)); // 8
+    console.log(sum(9,0)); // 9
+    console.log(sum(9,-9)); // 0
+   </script>
+
+   <script>
+    function greet(name='World'){ // 'World' = Default Value (if name not passed)
+      return `Hello ${name} 👋`
+    }
+    console.log(greet('Rohan')); // Hello Rohan 👋
+    console.log(greet()); // Hello World 👋
+   </script>
+</body>
+</html>

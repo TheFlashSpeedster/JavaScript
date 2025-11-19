@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Metro Ticket Price</h1>
+  <p>Final Price: ₹<span id="price"></span></p>
+
+  <script>
+    let base_price = prompt('Base Price: ')
+    let age = prompt('Age: ');
+    let gender = prompt('Gender (F/M): ');
+
+    // below 5yrs
+    if (age<=5){ // 100% Discount
+      price = '0';
+    }
+
+    // F or below 8 yrs
+    else if (gender==='F' || age<=8){ // 50% Discount (F or <8y)
+      price = base_price*50/100;
+    }
+
+    // M (above 65yrs)
+    else if (age>=65){ // 70% Discount (30% Pay Only)
+      price = base_price*30/100;
+    }
+
+    // M (b/w 8yrs to 65 yrs)
+    else{ // 0% Discount
+      price = base_price;
+    }
+
+    document.querySelector('#price').innerHTML=price;
+  </script>
+</body>
+</html>

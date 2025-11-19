@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function - Return Statement</title>
+</head>
+
+<body>
+  <h1>Function - Return Statement</h1>
+  <p>In JavaScript, the <code>return</code> statement is used to specify the value that a function should output when it
+    is called. When a function reaches a <code>return</code> statement, it stops executing and sends the specified value
+    back to the caller.</p>
+
+  <h2>Syntax</h2>
+  <pre><code>function functionName(parameters) {
+    // function body
+    return value;
+    }
+  </code></pre>
+
+  <script>
+    let age=10;
+    function checkAge(){
+      if (age==undefined){
+        return 'Undefined Age';
+      }
+      
+      // Below Code Won't Run if Above Return is Already Executed
+      if (age>=18){
+      return 'Adult';
+      }
+      else{
+        return 'Minor';
+      }
+    }
+    console.log(checkAge());
+  </script>
+
+</body>
+
+</html>

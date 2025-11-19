@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truthy & Falsy</title>
+</head>
+<body>
+  <h1>Falsy Values</h1>
+  <p>In JavaScript, the following 6 values are considered falsy:</p>
+  <ol>
+    <li><strong>false</strong></li>
+    <li><strong>0</strong> or <strong>-0</strong></li>
+    <li><strong>""</strong> (empty string)</li>
+    <li><strong>null</strong></li>
+    <li><strong>undefined</strong></li>
+    <li><strong>NaN</strong></li>
+    <li><strong>0n</strong> (Bigint)</li>
+  </ol>
+  <h1>Truthy Values</h1>
+  <p>All values that are not falsy are considered truthy. Some common truthy values include:</p>
+  <ol>
+    <li><strong>true</strong></li>
+    <li><strong>1</strong></li>
+    <li><strong>"hello"</strong> (non-empty string)</li>
+    <li><strong>[]</strong> (empty array)</li>
+    <li><strong>{}</strong> (empty object)</li>
+    <li><strong>anything else...</strong></li>
+  </ol>
+  <hr>
+  <h2>Example Code</h2>
+  <pre><code>
+if (value) {
+  // This block runs if 'value' is truthy
+} else {
+  // This block runs if 'value' is falsy
+}
+  </code></pre>
+  <hr>
+  <script>
+    let age='0';   
+    // Try changing this value to see different outputs
+    // false, 0, "", null, undefined, NaN -> Falsy
+    // anything else -> Truthy
+    console.log(age);
+    if (age){ // If 'age' is truthy
+      console.log("Truthy Value");
+    } else { // If 'age' is falsy
+      console.log("Falsy Value");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guard Operator</title>
+</head>
+<body>
+  <h1>Guard Operator (||)</h1>
+  <p>Use when a fallback value is needed.</p>
+  <p>Falsy Values: 0, null, undefined, NaN, '', false</p>
+
+  <h2>Syntax</h2>
+  <pre><code>
+condition || defaultValue
+  </code></pre>
+
+  <!-- EXAMPLES -->
+  <script>
+    let age1=12; // truthy value
+    let finalAge1 = age1 || 18; // only truthy
+    console.log(age1); // 12
+    console.log(finalAge1); // 12
+  </script>
+
+  <script>
+    let age2; // falsy value
+    let finalAge2 = age2 || 18; // only truthy
+    console.log(age2); // undefined
+    console.log(finalAge2); // 18
+  </script>
+
+  <script>
+    let age3=0; // falsy value
+    let finalAge3 = age3 || 18; // only truthy
+    console.log(age3); // 0
+    console.log(finalAge3); // 18
+  </script>
+
+</body>
+</html>

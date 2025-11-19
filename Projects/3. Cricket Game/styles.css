@@ -2,42 +2,54 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: lightseagreen;
+}
+
+.main {
+  background-color: lightgrey;
+  border-radius: 80px;
+}
+
 h1 {
   text-align: center;
+  color: white;
+  background-color: goldenrod;
+  padding: 30px;
+  border-radius: 30px;
 }
 
 .btn {
+  border: 3px solid coral;
+  border-radius: 90px;
+  padding: 20px;
+  background-color: mistyrose;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: lightsteelblue;
+}
+
+.btn img {
+  width: 120px;
+}
+
+.btn_container {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  border-radius: 6px;
+
 }
 
-.choices {
-  width: 80px;
-  height: 80px;
-  margin: 5px;
-  border: 2px solid blueviolet;
-  border-radius: 20%;
-  background-color: transparent;
-}
-
-.choices:hover {
-  background-color: rgb(100, 149, 255, 0.5);
-}
-
-#bat {
-  background-image: url(cricket-bat.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-#ball {
-  background-image: url(cricket-ball.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-#stump {
-  background-image: url(cricket-wicket.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+#winner {
+  color: azure;
+  margin-top: 60px;
+  background-color: lightcoral;
+  padding: 10px 10px 20px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-align: center;
 }

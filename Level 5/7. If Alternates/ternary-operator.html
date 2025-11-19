@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ternary Operator</title>
+  <!-- Short Way of if-else statement -->
+</head>
+
+<body>
+  <h1>Ternany Operator</h1>
+  <p>The ternary operator is a shorthand way of writing an if-else statement.<br>It takes three operands: a condition, a
+    value if the condition is true, and a value if the condition is false.</p>
+
+  <h2>Syntax</h2>
+  <pre><code>
+condition ? valueIfTrue : valueIfFalse
+  </code></pre>
+
+  <h2>Example Code</h2>
+  <pre><code>
+let age = 18;
+let canVote = (age >= 18) ? "Yes, you can vote." : "No, you cannot vote.";
+console.log(canVote);
+  </code></pre>
+
+  <!-- Normal (if-else) -->
+  <script>
+    let age1 = 12;
+    let result1;
+    if (age1 >= 18) {
+      result1 = 'Adult';
+    }
+    else {
+      result1 = 'Minor';
+    }
+    console.log('Normal: ' + result1);
+  </script>
+
+  <!-- Ternary Operator (if-else) -->
+  <script>
+    let age2 = 22;
+    let result2 = (age2>=18) ? 'Adult' : 'Minor'
+    console.log('Ternary: ' + result2)
+  </script>
+</body>
+
+</html>

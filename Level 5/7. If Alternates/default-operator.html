@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Default Operator</title>
+</head>
+<body>
+  <h1>Default Operator (??)</h1>
+  <p>Use when a fallback value is needed only for nullish values (null or undefined).</p>
+  <p>Falsy Values: Only 'null' or 'undefined'</p>
+
+  <h2>Syntax</h2>
+  <pre><code>
+condition ?? defaultValue
+  </code></pre>
+
+  <!-- EXAMPLES -->
+  <script>
+    let age1=null; // falsy value
+    let finalAge1 = age1 ?? 18; // 18
+    console.log(age1);
+    console.log(finalAge1);
+  </script>
+
+  <script>
+    let age2=undefined; // falsy value
+    let finalAge2 = age2 ?? 18; // 18
+    console.log(age2);
+    console.log(finalAge2);
+  </script>
+  
+  <script>
+    let age3=0; // falsy value (but not considered in default operator)
+    let finalAge3 = age3 ?? 18; // 0
+    console.log(age3);
+    console.log(finalAge3);
+  </script>
+
+  <script>
+    let age4=29; // falsy value (but not considered in default operator)
+    let finalAge4 = age4 ?? 18; // 29
+    console.log(age4);
+    console.log(finalAge4);
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+
+<body>
+  <h1>Functions</h1>
+  <p>Blocks of reusable code</p>
+
+  <!-- Normal Way -->
+  <!-- 
+  <script>
+    let age=12;
+    console.log(`Your Age is ${age}`);
+    age = 22;
+    console.log(`Your Age is ${age}`);
+    age = 38;
+    console.log(`Your Age is ${age}`);
+  </script>
+  -->
+
+  <!-- Using Function -->
+  <script>
+    let age1=12;
+    // Defining Function showAge() [0 parameters]
+    function showAge(){
+      console.log(`Your Age is ${age1}`);
+    }
+
+    showAge(); // function call/invoke
+    age1 = 22;
+    showAge(); // function call/invoke
+    age1 = 38;
+    showAge(); // function call/invoke
+  </script>
+</body>
+
+</html>
