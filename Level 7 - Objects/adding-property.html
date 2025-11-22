@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Creating an Object
+    let product = {
+      company: 'Amul',
+      name: 'Dark Chocolate',
+      price: 120,
+    };
+
+    // Adding New Properties
+    console.log(product); // { company: 'Dairy Milk', name: 'Silk' }
+
+    product.category = 'Chocolate'; // adding 'category' property (dot notation)
+    product['flavor'] = 'Milk'; // adding 'flavour' property (bracket notation)
+
+    console.log(product); // { company: 'Dairy Milk', name: 'Silk', category: 'Chocolate', flavor: 'Milk' }
+  </script>
+</body>
+</html>

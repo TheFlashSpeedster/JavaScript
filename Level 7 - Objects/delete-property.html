@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deleting Properties</title>
+</head>
+<body>
+  <script>
+    // Creating an Object
+    let product = {
+      company: 'Amul',
+      name: 'Dark Chocolate',
+      price: 120,
+    };
+
+    // Removing or Deleting Properties
+    console.log(product); // { company: 'Dairy Milk', name: 'Silk', price: 150 }
+
+    delete product.company; // deletes company property (whole key-value pair)
+    delete product['price']; // deletes price property (whole key-value pair)
+
+    console.log(product); // { name: 'Silk' }
+  </script>
+</body>
+</html>

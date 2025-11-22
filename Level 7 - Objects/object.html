@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+
+<body>
+  <h1>Object in JavaScript</h1>
+  <p>In JavaScript, an object is a collection of properties, and a property is an association between a name (or key)
+    and a value. Objects are used to store multiple values in a single variable.</p>
+  <section>
+    <h2>Syntax</h2>
+    <pre><code>let objectName = {
+    property1: value1,
+    property2: value2,
+    property3: value3,
+  };
+
+  // Accessing Properties
+  objectName.propertyName; // whole object
+  objectName.property1; // property1
+  objectName.property2; // property2
+  objectName.property3; // property3
+  </code></pre>
+  </section>
+
+  <script>
+    // 1. Creating an Object
+    let product = {
+      company: 'Amul',
+      name: 'Dark Chocolate',
+      price: 120,
+    };
+    
+    console.log(typeof product); // type = object
+    console.log(product) // print whole object
+
+    // 2. Accessing Properties (Using dot notation)
+    console.log(product.company); // product company
+    console.log(product.name); // product name
+    console.log(product.price); // product price
+
+    // 3A. Modifying Properties (Using dot notation)
+    product.company = 'Varka';
+    product.name = 'Lassi';
+    product.price = 10;
+
+    console.log(product.company); // modified product company
+    console.log(product.name); // modified product name
+    console.log(product.price); // modified product price
+    
+    // 3B. Modyfying Properties (Using bracket notation)
+    product['company'] = 'Dairy Milk';
+    product['name'] = 'Silk';
+    product['price'] = 150;
+    
+    console.log(product.company); // modified product company
+    console.log(product.name); // modified product name
+    console.log(product.price); // modified product price
+
+    // 4. Difference between Dot Notation and Bracket Notation
+    let propertyName = 'price';
+
+    // 4A. Dot notation (Searches for property with the name 'propertyName')
+    console.log(product.propertyName); // undefined
+
+    // 4B. Bracket Notation (Searches for property with the name 'price')
+    console.log(product[propertyName]); // 150
+
+  </script>
+
+</body>
+
+</html>
