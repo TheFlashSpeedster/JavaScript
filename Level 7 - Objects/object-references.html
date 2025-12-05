@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Primitive types are copied by value
+    // Pass By Value
+    // Changes to One Do Not Affect the Other
+    let a = 5; // a = 5
+    let b = a; // b = copy of a (5)
+    console.log(a, b); // both are 5
+
+    a = 10; // change a to 10
+    console.log(a, b); // a = 10, b = 5 (b remains unchanged)
+  </script>
+
+  <script>
+    // Objects are copied by reference
+    // Pass By Reference
+    // Changes to One Affect the Other
+    let p = {name : 'Alice'}; // p points to an object
+    let q = p; // q refers to p (object reference)
+    console.log(p, q); // both point to the same object {name: 'Alice'}
+
+    p.name = 'Bob'; // change the name property via p
+    console.log(p, q); // both reflect the change {name: 'Bob'}
+  </script>
+</body>
+</html>

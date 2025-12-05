@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // De-structuring Objects
+    let product = {
+      company: 'Amul',
+      name: 'Milk',
+      price: 50,
+    }
+
+    // Method 1: Traditional way
+    let company = product.company
+    console.log(company); // Amul
+
+    // Method 2: De-structuring assignment
+    let {name} = product
+    console.log(name); // Milk
+  </script>
+</body>
+</html>

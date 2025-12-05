@@ -18,10 +18,13 @@
       <!-- BAT -->
       <div class="bat">
         <button class="btn" onclick="
-          let userChoice='Bat';
-          let computerChoice=getComputerChoice();
+          userChoice='Bat';
+          computerChoice=getComputerChoice();
           winner=getWinner(userChoice, computerChoice);
-          document.querySelector('#winner').innerHTML=msg(userChoice, computerChoice, winner)">
+          document.querySelector('#winner').innerHTML=resultMsg(userChoice, computerChoice, winner);
+          document.querySelector('#win').innerHTML=score.win;
+          document.querySelector('#lost').innerHTML=score.lost;
+          document.querySelector('#tied').innerHTML=score.tied;">
           <img src="cricket-bat.png">
         </button>
       </div>
@@ -32,7 +35,10 @@
           userChoice='Ball';
           computerChoice=getComputerChoice();
           winner=getWinner(userChoice, computerChoice);
-          document.querySelector('#winner').innerHTML=msg(userChoice, computerChoice, winner)">
+          document.querySelector('#winner').innerHTML=resultMsg(userChoice, computerChoice, winner);
+          document.querySelector('#win').innerHTML=score.win;
+          document.querySelector('#lost').innerHTML=score.lost;
+          document.querySelector('#tied').innerHTML=score.tied;">
           <img src="cricket-ball.png" id="ball-img">
         </button>
       </div>
@@ -43,65 +49,27 @@
           userChoice='Stump';
           computerChoice=getComputerChoice();
           winner=getWinner(userChoice, computerChoice);
-          document.querySelector('#winner').innerHTML=msg(userChoice, computerChoice, winner)">
+          document.querySelector('#winner').innerHTML=resultMsg(userChoice, computerChoice, winner);
+          document.querySelector('#win').innerHTML=score.win;
+          document.querySelector('#lost').innerHTML=score.lost;
+          document.querySelector('#tied').innerHTML=score.tied;">
           <img src="cricket-stump.png">
         </button>
       </div>
     </div>
 
     <div id="winner">
-      <p>Please Select Anyone</p>
+      <p><b>Choose Any Option</b></p>
+    </div>
+
+    <div class="score">
+      <p><b>Win:</b> <span id="win"></span></p>
+      <p><b>Lost:</b> <span id="lost"></span></p>
+      <p><b>Tied:</b> <span id="tied"></span></p>
     </div>
   </div>
 
-  <script>
-    // Get Computer Choice
-    function getComputerChoice(){
-      rn = Math.random() * 3;
-      if (rn >= 0 && rn < 1) {
-        return 'Bat';
-      }
-      else if (rn >= 1 && rn < 2) {
-        return 'Ball';
-      }
-      else {
-        return 'Stump';
-      }
-    }
-
-    // Compare computerChoice & userChoice => Then Get Winner
-    function getWinner(userChoice, computerChoice) {
-      if (userChoice === computerChoice){
-        return 'Match Tied 😒';
-      }
-      else if (userChoice==='Bat' && computerChoice==='Ball'){
-        return 'You Won 😍';
-      }
-      else if (userChoice==='Bat' && computerChoice==='Stump'){
-        return 'You Lost 😭';
-      }
-      else if (userChoice==='Ball' && computerChoice==='Bat'){
-        return 'You Lost 😭';
-      }
-      else if (userChoice==='Ball' && computerChoice==='Stump'){
-        return 'You Won 😍';
-      }
-      else if (userChoice==='Stump' && computerChoice==='Bat'){
-        return 'You Won 😍';
-      }
-      else if (userChoice==='Stump' && computerChoice==='Ball'){
-        return 'You Lost 😭';
-      }
-      else {
-        return '';
-      }
-    }
-    
-    // Print Result Message
-    function msg(userChoice, computerChoice, winner){
-      return `User: ${userChoice}<br>Computer: ${computerChoice}<br>Winner: ${winner}`
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // JavaScript Object - Keys May/May Not Be in Quotes
+    // (type = object)
+    let product = {
+      name: 'Amul',
+      type: 'Milk',
+      price: 49,
+    }
+
+    // JSON Object - Keys Must Be in Quotes
+    // (type = string)
+    let productx = {
+      'name': 'Amul',
+      'type': 'Milk',
+      'price': 49,
+    }
+
+    console.log(product, typeof product)
+
+    // JSON.stringify() - Convert JavaScript Object into JSON String
+    let productJson = JSON.stringify(product); // Convert to JSON String
+    console.log(productJson); // JSON String
+    console.log(typeof productJson); // string
+
+    // JSON.parse() - Convert JSON String to JavaScript Object
+    let prodJs = JSON.parse(productJson); // Convert to JavaScript Object
+    console.log(prodJs); // JavaScript Object
+    console.log(typeof prodJs) // object
+  </script>
+</body>
+</html>

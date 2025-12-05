@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let obj = {
+      message: 'good job',
+      status: 'complete',
+    }
+
+    // Method 1
+    // let message = obj.message;
+    // let status = obj.status;
+    // console.log(message, status)
+
+    // Method 2
+    let {message, status} = obj;
+    console.log(message, status);
+  </script>
+</body>
+</html>

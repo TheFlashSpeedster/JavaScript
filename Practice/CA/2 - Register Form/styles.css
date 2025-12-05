@@ -1,0 +1,58 @@
+* {
+  font-family: arial;
+}
+
+body {
+  background-color: cornflowerblue;
+}
+
+.container {
+  background-color: white;
+  padding: 16px;
+  width: 50%;
+  margin: auto;
+}
+
+#submit {
+  color: white;
+  background-color: green;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#submit:hover {
+  opacity: 1;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  margin: 5px 0 22px 0;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  opacity: 0.2;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+a {
+  color: dodgerblue;
+}

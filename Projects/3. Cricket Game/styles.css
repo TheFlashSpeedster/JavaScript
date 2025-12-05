@@ -3,22 +3,21 @@
 }
 
 body {
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: lightseagreen;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: wheat;
 }
 
 .main {
-  background-color: lightgrey;
-  border-radius: 80px;
+  background-color: cadetblue;
+  border-radius: 30px;
 }
 
 h1 {
   text-align: center;
-  color: white;
-  background-color: goldenrod;
+  background-color: lightskyblue;
   padding: 30px;
-  border-radius: 30px;
+  border-radius: 30px 30px 0 0;
 }
 
 .btn {
@@ -30,7 +29,7 @@ h1 {
 }
 
 .btn:hover {
-  background-color: lightsteelblue;
+  border: 3px solid orange;
 }
 
 .btn img {
@@ -44,12 +43,16 @@ h1 {
 }
 
 #winner {
-  color: azure;
   margin-top: 60px;
   background-color: lightcoral;
   padding: 10px 10px 20px 10px;
   font-size: 20px;
-  font-weight: bold;
-  border-radius: 30px;
   text-align: center;
+}
+
+.score {
+  background-color: rgb(155, 74, 231);
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  justify-content: space-around;
 }

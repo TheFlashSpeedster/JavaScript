@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    obj1 = {company: 'Amazon', product: 'AWS'};
+    console.log(obj1.company, obj1.product); // Amazon AWS
+    obj2 = obj1;
+    console.log(obj2.company, obj2.product) // Amazon AWS
+
+    obj1.company = 'Myntra';
+    obj1.product = 'Online Shopping';
+    console.log(obj2.company, obj2.product); // Obj2 hold same values as Obj1
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // ------------ Storing Simple Values ------------
+
+    // localStorage.setItem(Key, Value)
+    // Sets Key-Value Pair in Local Storage
+    localStorage.setItem('name', 'Flash');
+    localStorage.setItem('city', 'Central City');
+
+    // localStorage.getItem(Key)
+    // Retrieves Value by Key from Local Storage
+    let name = localStorage.getItem('name');
+    let city = localStorage.getItem('city');
+    console.log(name); // Flash
+    console.log(city);  // Central City
+
+    // ------------- Storing an Object ------------
+    product = {
+      name: 'Milk',
+      company: 'Amul',
+      price: 49,
+      rating: {
+        stars: 4,
+        reviews: 233,
+      }
+    }
+    // setItem - Single Item of Object
+    localStorage.setItem('name', product.name)
+    localStorage.setItem('company', product.company)
+    localStorage.setItem('stars', product.rating.stars)
+    // setItem - Entire Object (using stringify)
+    localStorage.setItem('product', JSON.stringify(product))
+  </script>
+</body>
+</html>

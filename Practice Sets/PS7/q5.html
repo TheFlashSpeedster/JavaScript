@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let product1 = {
+      name: 'Amul',
+      type: 'Milk',
+      price: 50,
+    }
+
+    let product2 = {
+      name: 'Amul',
+      type: 'Milk',
+      price: 50
+    }
+
+    function isIdenticalProduct(){
+      if (product1.name === product2.name && product1.type === product2.type && product1.price === product2.price){
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+
+    console.log(isIdenticalProduct())
+  </script>
+</body>
+</html>
