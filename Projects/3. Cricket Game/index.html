@@ -1,75 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="cricket.png">
-  <script src="https://kit.fontawesome.com/d7f0ad760c.js" crossorigin="anonymous"></script>
   <title>Cricket Game</title>
+  <link rel="icon" href="images/cricket.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="main">
-    <h1>Bat Ball Stump Game</h1>
+  <h1>Bat Ball Stump</h1>
 
-    <div class="btn_container">
-      <!-- BAT -->
-      <div class="bat">
-        <button class="btn" onclick="
-          userChoice='Bat';
-          computerChoice=getComputerChoice();
-          winner=getWinner(userChoice, computerChoice);
-          document.querySelector('#winner').innerHTML=resultMsg(userChoice, computerChoice, winner);
-          document.querySelector('#win').innerHTML=score.win;
-          document.querySelector('#lost').innerHTML=score.lost;
-          document.querySelector('#tied').innerHTML=score.tied;">
-          <img src="cricket-bat.png">
-        </button>
-      </div>
+  <!-- Bat -->
+  <button class="choices-button" id="bat"
+  onclick="
+  userChoice='Bat'; // user choice
+  computerChoice=getComputerChoice(); // computer choice
+  console.log(userChoice, computerChoice) // log choices
+  result=getResult(userChoice, computerChoice);
+  console.log(result);
+  console.log(score);
+  showResult();
+  "
+  ><img class="choices-image" src="images/cricket-bat.png" alt="bat-image"></button>
+  
+  <!-- Ball -->
+  <button class="choices-button" id="ball"
+  onclick="
+  userChoice='Ball'; // user choice
+  computerChoice=getComputerChoice(); // computer choice
+  console.log(userChoice, computerChoice) // log choices
+  result=getResult(userChoice, computerChoice);
+  console.log(result);
+  console.log(score);
+  showResult();
+  "
+  ><img class="choices-image" src="images/cricket-ball.png" alt="ball-image"></button>
 
-      <!-- BALL -->
-      <div class="ball">
-        <button class="btn" onclick="
-          userChoice='Ball';
-          computerChoice=getComputerChoice();
-          winner=getWinner(userChoice, computerChoice);
-          document.querySelector('#winner').innerHTML=resultMsg(userChoice, computerChoice, winner);
-          document.querySelector('#win').innerHTML=score.win;
-          document.querySelector('#lost').innerHTML=score.lost;
-          document.querySelector('#tied').innerHTML=score.tied;">
-          <img src="cricket-ball.png" id="ball-img">
-        </button>
-      </div>
+  <!-- Stump -->
+  <button class="choices-button" id="stump"
+  onclick="
+  userChoice='Stump'; // user choice
+  computerChoice=getComputerChoice(); // computer choice
+  console.log(userChoice, computerChoice) // log choices
+  result=getResult(userChoice, computerChoice);
+  console.log(result);
+  console.log(score);
+  showResult();
+  "
+  ><img class="choices-image" src="images/cricket-stump.png" alt="stump-image"></button>
 
-      <!-- STUMP -->
-      <div class="stump">
-        <button class="btn" onclick="
-          userChoice='Stump';
-          computerChoice=getComputerChoice();
-          winner=getWinner(userChoice, computerChoice);
-          document.querySelector('#winner').innerHTML=resultMsg(userChoice, computerChoice, winner);
-          document.querySelector('#win').innerHTML=score.win;
-          document.querySelector('#lost').innerHTML=score.lost;
-          document.querySelector('#tied').innerHTML=score.tied;">
-          <img src="cricket-stump.png">
-        </button>
-      </div>
-    </div>
+  <!-- Reset -->
+  <br>
+  <button class="reset-button" id="reset"
+  onclick="clearScore()
+  "><img class="reset-image" src="images/reset.png" alt=""></button>
 
-    <div id="winner">
-      <p><b>Choose Any Option</b></p>
-    </div>
-
-    <div class="score">
-      <p><b>Win:</b> <span id="win"></span></p>
-      <p><b>Lost:</b> <span id="lost"></span></p>
-      <p><b>Tied:</b> <span id="tied"></span></p>
-    </div>
-  </div>
-
+  <hr>
+  <div id="user"></div>
+  <div id="computer"></div>
+  <div id="result"></div>
+  <div id="score"></div>
   <script src="script.js"></script>
 </body>
-
 </html>

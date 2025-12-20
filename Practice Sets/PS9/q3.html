@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No of Button Clicks</title>
+  <style>
+    button {
+      height: 100px;
+      width: 100px;
+      font-size: 50px;
+      background-color: green;
+      border: none;
+      border-radius: 10px;
+    }
+    .js-odd {
+      background-color: red;
+    }
+    .js-even {
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>No Of Clicks: <span id="clicks">0</span></h1>
+  <button id="btn" onclick="incClicks()">0</button>
+  <script>
+    let count = localStorage.getItem('Clicks') || 0;
+    let msg = document.getElementById('clicks');
+    let btn = document.getElementById('btn');
+    
+    function incClicks() {
+      count++
+      localStorage.setItem('Clicks', count)
+      updateButton();
+    }
+
+    function updateButton() {
+      if (count%2===0){
+        btn.classList.add('js-even');
+        btn.classList.remove('js-odd');
+      }
+      else{
+        btn.classList.add('js-odd');
+        btn.classList.remove('js-even');
+      }
+      msg.innerText = count;
+      btn.innerText = count;
+    }
+    updateButton();
+  </script>
+</body>
+
+</html>

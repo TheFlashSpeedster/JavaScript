@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Methods</title>
+</head>
+<body>
+  <h1 class="hx">DOM Methods</h1>
+  <ul type="square">
+    <li>getElementById()</li>
+    <li>getElementsByClassName()</li>
+    <li>querySelector()</li>
+    <li>classList: add(), remove()</li>
+    <li>createElement()</li>
+    <li>appendChild()</li>
+    <li>removeChild()</li>
+    <li>replaceChild()</li>
+  </ul>
+
+  <p id="para1">Lorem ipsum dolor sit amet.</p>
+  <p class="para">Lorem ipsum dolor sit amet.</p>
+  <p class="para">Lorem ipsum dolor sit amet.</p>
+
+  <div id="buttons">Buttons: <br></div>
+  <script>
+    para1 = document.getElementById("para1")
+    console.log(para1) // para1 by ID
+
+    para = document.getElementsByClassName("para")
+
+    console.log(para[0]) // para class (1st item)
+    console.log(para[1]) // para class (2nd item)
+
+    // Button 1
+    btn1 = document.createElement("button");
+    btn1.innerText="Click Me 1"
+    document.querySelector("#buttons").appendChild(btn1)
+
+    // document.querySelector("#buttons").removeChild(btn1)
+
+    // Button 2
+    btn2 = document.createElement("button");
+    btn2.innerText="Click Me 2"
+    document.querySelector("#buttons").appendChild(btn2)
+
+    document.querySelector("#buttons").replaceChild(btn2)
+
+  </script>
+</body>
+</html>

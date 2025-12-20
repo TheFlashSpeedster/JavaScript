@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>localStorage</title>
 </head>
 <body>
   <script>
-    // ------------ Storing Simple Values ------------
+    // ------------ localStorage Basic Usage ------------
 
     // localStorage.setItem(Key, Value)
     // Sets Key-Value Pair in Local Storage
@@ -37,6 +37,15 @@
     localStorage.setItem('stars', product.rating.stars)
     // setItem - Entire Object (using stringify)
     localStorage.setItem('product', JSON.stringify(product))
+
+
+    // ------------- Removing Items -------------
+
+    // removeItem() - Removes Specified Item
+    localStorage.removeItem('product')
+
+    // clear() - Remove All Items
+    localStorage.clear()
   </script>
 </body>
 </html>

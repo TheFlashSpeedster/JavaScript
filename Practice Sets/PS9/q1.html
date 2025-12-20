@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greet GM, GA, GN</title>
+</head>
+
+<body>
+  <h1>Current Hour: <span id="timeHour"></span></h1>
+  <h1 id="greet"></h1>
+  <script>
+    let time = new Date();
+    hour = time.getHours();
+    document.getElementById('timeHour').innerText = hour;
+
+    // GM (12Midnight(0) to 12 Noon(12)) | GA (12 Noon(12) to 6PM(18)) | GN (6 PM(18) to 12 Midnight(0))
+
+    function greet() {
+      if (hour >= 0 && hour < 12) {
+        return "Good Morning"
+      }
+      else if (hour >= 12 && hour < 18) {
+        return "Good Afternoon"
+      }
+      else {
+        return "Good Night"
+      }
+    }
+
+    msg = document.getElementById('greet')
+    msg.innerText = greet();
+  </script>
+</body>
+
+</html>

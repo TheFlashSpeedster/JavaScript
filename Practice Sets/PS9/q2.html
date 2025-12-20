@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greet GM, GA, GN</title>
+</head>
+
+<body>
+  <h1>Current Hour: <span id="timeHour"></span></h1>
+  <input id="name" type="text" placeholder="Your Name">
+  <button onclick="greet()">Submit</button>
+  <p id="greet"></p>
+
+  <script>
+    let time = new Date();
+    let hour = time.getHours();
+    document.getElementById('timeHour').innerText = hour;
+
+    function greet() {
+      if (hour >= 0 && hour < 12) {
+        text = "Good Morning"
+      }
+      else if (hour >= 12 && hour < 18) {
+        text = "Good Afternoon"
+      }
+      else {
+        text = "Good Night"
+      }
+      msg = document.getElementById('greet');
+      name = document.getElementById('name').value;
+      msg.innerText = `${text} ${name}`;
+    }
+
+  </script>
+</body>
+
+</html>

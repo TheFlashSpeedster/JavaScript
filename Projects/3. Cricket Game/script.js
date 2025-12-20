@@ -1,65 +1,92 @@
 let userChoice;
 let computerChoice;
-let score ={
-  win: 0,
-  lost: 0,
-  tied: 0,
-  displayScore(){
-    return `<b>User:</b> ${userChoice}<br><b>Computer:</b> ${computerChoice}<br><b>Result:</b> ${winner}`
-  }
-};
+let result;
+let scoreLocal = localStorage.getItem('Score'); // score from LocalStorage
+let score;
+if (scoreLocal){ // if score already present in local
+  score = JSON.parse(scoreLocal) // set score after parsing into object
+}
+else { // if does not exist
+  score = { win: 0, lost: 0, tie: 0 } // set score object
+}
 
+function getComputerChoice(){
+  random = Math.random() * 3 // random number (0,3)
+  // [0,1) = Bat | [1,2] = Ball | (2,3] = Stump
 
-// Get Computer Choice
-function getComputerChoice() {
-  rn = Math.random() * 3;
-  if (rn >= 0 && rn < 1) {
-    return 'Bat';
+  if (random>=0 && random<1){
+    return 'Bat'
   }
-  else if (rn >= 1 && rn < 2) {
-    return 'Ball';
+  else if (random>=1 && random<=2){
+    return 'Ball'
+  }
+  else if (random>2 && random<=3){
+    return 'Stump'
   }
   else {
-    return 'Stump';
+    return false
   }
 }
 
-// Compare computerChoice & userChoice => Then Get Winner
-function getWinner(userChoice, computerChoice) {
-  if (userChoice === computerChoice) {
-    score.tied += 1; // Update Score
-    return 'Match Tied 😒';
+function getResult(userChoice, computerChoice){
+  localStorage.setItem('Score', JSON.stringify(score))
+  if (userChoice===computerChoice){
+    score.tie ++
+    return "Tie"
   }
-  else if (userChoice === 'Bat' && computerChoice === 'Ball') {
-    score.win += 1; // Update Score
-    return 'You Won 😍';
+  else if (userChoice==='Bat' && computerChoice==='Ball'){
+    score.win ++
+    return "Win"
   }
-  else if (userChoice === 'Bat' && computerChoice === 'Stump') {
-    score.lost += 1; // Update Score
-    return 'You Lost 😭';
+  else if (userChoice==='Bat' && computerChoice==='Stump'){
+    score.lost ++
+    return "Lost"
   }
-  else if (userChoice === 'Ball' && computerChoice === 'Bat') {
-    score.lost += 1; // Update Score
-    return 'You Lost 😭';
+  else if (userChoice==='Ball' && computerChoice==='Bat'){
+    score.lost ++
+    return "Lost"
   }
-  else if (userChoice === 'Ball' && computerChoice === 'Stump') {
-    score.win += 1; // Update Score
-    return 'You Won 😍';
+  else if (userChoice==='Ball' && computerChoice==='Stump'){
+    score.win ++
+    return "Win"
   }
-  else if (userChoice === 'Stump' && computerChoice === 'Bat') {
-    score.win += 1; // Update Score
-    return 'You Won 😍';
+  else if (userChoice==='Stump' && computerChoice==='Bat'){
+    score.win ++
+    return "Win"
   }
-  else if (userChoice === 'Stump' && computerChoice === 'Ball') {
-    score.lost += 1; // Update Score
-    return 'You Lost 😭';
+  else if (userChoice==='Stump' && computerChoice==='Ball'){
+    score.lost ++
+    return "Lost"
   }
   else {
-    return '';
+    return false
   }
 }
 
-// Print Result Message
-function resultMsg(userChoice, computerChoice, winner) {
-  return score.displayScore()
+function clearScore(){
+  localStorage.clear();
+  score = { win: 0, lost: 0, tie: 0 };
+  userChoice = ''
+  computerChoice = ''
+  result = ''
+  showResult();
+}
+
+function showResult(){
+  divUser = document.getElementById('user');
+  divComputer = document.getElementById('computer');
+  divResult = document.getElementById('result');
+  divScore = document.getElementById('score');
+
+  userMsg = `<b>You:</b> ${userChoice}`;
+  divUser.innerHTML = userChoice ? userMsg : '';
+
+  computerMsg = `<b>Computer:</b> ${computerChoice}`;
+  divComputer.innerHTML = computerChoice ? computerMsg : '';
+
+  resultMsg = `<b>Match Result:</b> ${result}`
+  divResult.innerHTML = result ? resultMsg : '';
+
+  scoreMsg = `<b>Win:</b> ${score.win} <b>Lost:</b> ${score.lost } <b>Tie:</b> ${score.tie}`
+  divScore.innerHTML = scoreMsg;
 }
