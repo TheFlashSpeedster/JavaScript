@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>A Pattern to Accumulate Values through looping</h1>
+
+  <script>
+    // Accumulator Pattern
+
+    // 1. Example - Sum of of numbers of array
+    let nums = [4,2,1,5,6,2];
+    let sum = 0;
+
+    for (let i=0; i<nums.length; i++){
+      sum += nums[i]
+    }
+
+    console.log("Sum is " + sum)
+
+    // 2. Example - New array contaning squares of prevous array
+    let squares = []
+    console.log(squares)
+
+    for (i=0; i<nums.length; i++){
+      squares.push(nums[i]**2)
+    }
+
+    console.log(squares)
+  </script>
+</body>
+</html>
