@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Functions used for executing code after a delay
+
+    // 1. setTimeout(function, time)
+    // Runs once
+    let alarm = () => console.log('Good Morning!');
+
+    let timerID = setTimeout(alarm, 2000);
+    console.log('Alarm Set with ID: ' + timerID)
+
+    // Stop Timeout
+    clearTimeout(timerID);
+  </script>
+</body>
+
+</html>

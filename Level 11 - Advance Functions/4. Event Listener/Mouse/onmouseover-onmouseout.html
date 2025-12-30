@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mouse Hover Example</title>
+  <script>
+    function mouseOver() {
+      document.getElementById("hoverBox").style.backgroundColor = "lightgreen";
+    }
+    function mouseOut() {
+      document.getElementById("hoverBox").style.backgroundColor = "lightcoral";
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Mouse Hover Example</h3>
+  <div id="hoverBox" onmouseover="mouseOver()" onmouseout="mouseOut()" style="width:200px;height:100px;background-color:lightcoral;text-align:center;line-height:100px;">
+    Hover over me
+  </div>
+</body>
+
+</html>

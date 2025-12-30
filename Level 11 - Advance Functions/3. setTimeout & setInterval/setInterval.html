@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 2. setInterval(function, time)
+    // Runs repeatedly after intervals
+    
+    let time = new Date();
+    let alarm = () => console.info("WAKE UP!" + time)
+
+    let intervalID = setInterval(alarm, 1000);
+    console.log("Alarm Set with ID (repeat): " + intervalID)
+    // clearInterval(intervalID);
+
+    // Clear Interval After a  Fixed Time
+    setTimeout(() => clearInterval(intervalID), 5000);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">Click Here</button>
+  <script>
+    let btn = document.getElementById('btn')
+    // addEventListener(event, function)
+
+    // Button (click) - Behaviour 1
+    let behaviour1 = () => console.log('Single Clicked!')
+    btn.addEventListener('click', behaviour1)
+
+    // Button (dblclick) - Behaviour 2
+    let behaviour2 = () => console.log('Double Clicked!')
+    btn.addEventListener('dblclick', behaviour2)
+
+    // Window (contextmenu AKA right-click) - Behaviour 3
+    // Blocks Right Click
+    let behaviour3 = event => { event.preventDefault(); alert('Right Click Not Allowed!') }
+    document.addEventListener('contextmenu', behaviour3)
+
+    // removeEventListener(event, function)
+    btn.removeEventListener('click', behaviour1)
+    
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. Named Function (Normal)
+    // function fn(parameters){statement}
+    function add(a,b){
+      return a+b
+    }
+    console.log(add(4,5))
+
+    // 1X. Function with Default Parameter
+    // function fn(p1="Default Value"){statement}
+    function greet(name='Mylord'){
+      return "Welcome " + name
+    }
+    console.log(greet());
+    console.log(greet('Shadow'));
+
+    // 2. Anonymous Function (same as above but without a name)
+    // fn = function(parameters){statement}
+    const product = function(a,b){return a*b}
+    console.log(product(4,5))
+
+    // 3. Arrow Function (same as above but with a different syntax)
+    // fn = (parameters) => statement
+    const divide = (a,b) => a/b;
+    console.log(divide(10,5))
+
+  </script>
+
+</body>
+</html>

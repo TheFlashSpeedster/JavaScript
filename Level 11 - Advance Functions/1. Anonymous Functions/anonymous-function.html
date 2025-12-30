@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Anonymous Function
+    // Function without usual name defining
+    let sum = function (a, b) {
+      return a + b
+    }
+    // console.log(sum(4,5));
+
+    let sumThree = function (x, y, z, sumTwo) {
+      let sum1 = sumTwo(x, y); // sum of x and y
+      return sumTwo(sum1, z); // sum of (x,y) and z
+    }
+
+    console.log(sumThree(4, 5, 7, sum));
+
+    console.log(sum) // function
+    console.log(typeof sum); // function data type
+  </script>
+</body>
+
+</html>

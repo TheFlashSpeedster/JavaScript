@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form Validation</title>
+  <script>
+    function validateForm() {
+      const name = document.myForm.username.value.trim();
+      const email = document.myForm.email.value.trim();
+      const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!name || !email) {
+        alert("All fields are required!");
+        return false;
+      }
+      if (!pattern.test(email)) {
+        alert("Invalid email address!");
+        return false;
+      }
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+  <form name="myForm" onsubmit="return validateForm()">
+    <input type="text" name="username" placeholder="Enter Name"><br><br>
+    <input type="text" name="email" placeholder="Enter Email"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+</html>

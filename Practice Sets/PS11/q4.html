@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn {
+      font-size: 10px;
+      width: 100px;
+      height: 50px;
+      background-color: red;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .js-btn-double {
+      font-size: 20px;
+      width: 200px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn">Click To Grow!</button>
+  <script>
+    let btn = document.querySelector('.btn');
+    let doubleSize = () => btn.classList.add('js-btn-double');
+    btn.addEventListener('click', setTimeout(doubleSize, 2000));
+  </script>
+</body>
+</html>

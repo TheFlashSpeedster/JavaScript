@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Array Methods
+
+    // 1. filter(value, index)
+    let nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let even = nums.filter(nums => {
+      if (nums % 2 === 0) {
+        return true; // accept if num is even
+      }
+      else {
+        return false; // reject if not
+      }
+    })
+    console.log(even); // final even array
+
+    // filter - Pro Way
+    let evenNums = nums.filter((nums) => nums%2===0)
+    console.log(evenNums)
+
+    let oddNums = nums.filter((nums) => nums%2===1)
+    console.log(oddNums)
+  </script>
+</body>
+
+</html>

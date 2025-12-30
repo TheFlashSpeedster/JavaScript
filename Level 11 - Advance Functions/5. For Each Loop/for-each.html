@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // For Each Loop
+    // A method for array iteration
+
+    let fruits = ['apple', 'banana', 'mango', 'guava', 'grapes'];
+    // 1. Traditional (via For Loop)
+    for (let i = 0; i < fruits.length; i++) {
+      console.log(fruits[i]);
+    }
+
+    // 2. Via For Each Loop
+    fruits.forEach(function (x) { console.log(x) }); // anonymous fn
+    fruits.forEach((x) => console.log(x)); // arrow fn
+
+    // 3. Search Example
+    function search(array, item) {
+      for (let j = 0; j < array.length; j++) {
+        if (array[j] === item) {
+          console.log('Found at Index: ' + j);
+          return;
+        }
+      }
+      console.log('Not Found!')
+    }
+
+    search(fruits, 'guava')
+
+  </script>
+</body>
+
+</html>
